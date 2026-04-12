@@ -1,0 +1,168 @@
+%-------------------------
+% Resume in LateX
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small #1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Narendra S Kapashi} & Email: \href{mailto:skapashinarendra@gmail.com}{skapashinarendra@gmail.com}\\
+  \href{https://github.com/imtherealnaska}{github.com/imtherealnaska} $|$ \href{https://www.linkedin.com/in/narendra123/}{linkedin.com/in/narendra123} & Mobile: +91 9113246077 \\
+\end{tabular*}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Hewlett Packard Enterprise (HPE)}{Bengaluru, IN}
+      {System Software Engineer 2}{2023 -- Present}
+      \resumeSubSubheading
+        {System Software Engineer 1}{2021 -- 2023}
+      \resumeItemListStart
+        \resumeItem{P0 -- JVM OutOfMemoryException}
+          {Resolved a P0 outage on StoreOnce 5250 appliances where unbounded xfs\_logprint heap accumulation caused JVM crashes and API timeouts for enterprise customers; redirected output to isolated files and tuned JVM heap ceiling, eliminating crash recurrence across the fleet.}
+        \resumeItem{P0 -- iptables Misconfiguration Post-Upgrade}
+          {Patched a post-upgrade regression that took down GUI and all management services for 15+ enterprise customers operating 70+ StoreOnce systems each; diagnosed iptables rule misapplication and delivered fixes to both 4.3.11 and master, restoring access across all affected deployments.}
+        \resumeItem{Concurrency Bug -- Software Update Pipeline}
+          {Resolved a flag-race defect where a stale Java process blocked software upgrades for customers; traced via log and code path analysis, reordered execution sequence, and added stale process guards to prevent recurrence.}
+        \resumeItem{Database Modernization -- PostgreSQL 12 $\rightarrow$ 18}
+          {Owned pg12$\rightarrow$pg18 migration across the management stack --- schema compatibility, extension upgrades, config tuning, and service validation --- with zero customer downtime; retired MongoDB config store to eliminate security exposure from an end-of-life version.}
+        \resumeItem{Gen5 Platform Launch -- Manageability Bringup}
+          {Bootstrapped 4 core services (Infrastructure Manager, PostgreSQL, Credential Services, SMTP) from scratch on Rocky Linux as part of a 12-engineer team; shipped ERT log-collection scripts and configurable task timeouts as production support tooling, and established coverage baselines across 7 backend repositories.}
+        \resumeItem{Support Console TUI}
+          {Replaced fully manual support triage --- where engineers ran 20+ commands per ticket with risk of missed steps --- with a Python TUI that auto-collects subsystem diagnostics and bundles ticket outputs; owned Python 2.7 $\rightarrow$ 3.9 migration of the entire tool.}
+        \resumeItem{SAMBA NAS Integration}
+          {Delivered manageability service changes for SAMBA-based NAS share integration, replacing a 7-year-old Likewise protocol stack that lacked support for modern Windows versions.}
+        \resumeItem{GUI Platform -- Cross-Domain Contribution}
+          {Took ownership of React/Grommet frontend work outside primary Java/backend domain; led Grommet 2.0 upgrade across the product and delivered the platform with GUI changes including hardware image updates, capability additions.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://github.com/imtherealnaska/sourcemapper}{SourceMapper}}
+      {Visual Rust code analysis tool that parses source files into AST, constructs dependency and call graphs, and serves them via an Axum REST API with a Svelte frontend; ships as a single binary. \textit{Rust | tree-sitter | Axum | Svelte}}
+    \resumeSubItem{\href{https://github.com/imtherealnaska/rusnmp}{SNMPv2 Manager}}
+      {Implemented SNMPv2 manager from scratch: custom ASN.1 BER parser, async Tokio architecture, GetBulk optimization, and a clean API for polling and walking MIBs against real network devices. \textit{Rust | Tokio | ASN.1 BER | UDP}}
+    \resumeSubItem{\href{https://github.com/imtherealnaska/resprs}{Redis-Compatible Server (RESP Protocol)}}
+      {Built a Redis-compatible server from scratch: full RESP protocol parser, pipelining, and core command set on an async Tokio runtime; benchmarked at \textasciitilde85\% of native Redis throughput. \textit{Rust | Tokio | RESP}}
+    \resumeSubItem{\href{https://github.com/imtherealnaska/aata}{Consensus Board Game}}
+      {Multiplayer game where 2 players define piece movement rules via a consensus protocol; single GameLoop actor owns all state, WebSocket connections communicate via Tokio channels --- eliminates shared mutable state entirely. \textit{Rust | Tokio | WebSocket | Actor Pattern}}
+  \resumeSubHeadingListEnd
+
+
+%--------SKILLS------------
+\section{Skills}
+  \resumeSubHeadingListStart
+    \item{
+      \textbf{Languages}{: Rust | Java | Python | Bash}
+      \hfill
+    }
+    \item{
+      \textbf{Databases}{: PostgreSQL}
+      \hfill
+      \textbf{Tools}{: Git}
+    }
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The National Institute of Engineering}{Mysuru, India}
+      {Bachelor of Engineering in Information Science}{2016 -- 2020}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
