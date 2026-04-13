@@ -106,22 +106,22 @@
       \resumeSubSubheading
         {System Software Engineer 1}{2021 -- 2023}
       \resumeItemListStart
-        \resumeItem{P0 -- JVM OutOfMemoryException}
-          {Resolved a P0 outage on StoreOnce 5250 appliances where unbounded xfs\_logprint heap accumulation caused JVM crashes and API timeouts for enterprise customers; redirected output to isolated files and tuned JVM heap ceiling, eliminating crash recurrence across the fleet.}
-        \resumeItem{P0 -- iptables Misconfiguration Post-Upgrade}
-          {Patched a post-upgrade regression that took down GUI and all management services for 15+ enterprise customers operating 70+ StoreOnce systems each; diagnosed iptables rule misapplication and delivered fixes to both 4.3.11 and master, restoring access across all affected deployments.}
-        \resumeItem{Concurrency Bug -- Software Update Pipeline}
-          {Resolved a flag-race defect where a stale Java process blocked software upgrades for customers; traced via log and code path analysis, reordered execution sequence, and added stale process guards to prevent recurrence.}
-        \resumeItem{Database Modernization -- PostgreSQL 12 $\rightarrow$ 18}
-          {Owned pg12$\rightarrow$pg18 migration across the management stack --- schema compatibility, extension upgrades, config tuning, and service validation --- with zero customer downtime; retired MongoDB config store to eliminate security exposure from an end-of-life version.}
-        \resumeItem{Gen5 Platform Launch -- Manageability Bringup}
-          {Bootstrapped 4 core services (Infrastructure Manager, PostgreSQL, Credential Services, SMTP) from scratch on Rocky Linux as part of a 12-engineer team; shipped ERT log-collection scripts and configurable task timeouts as production support tooling, and established coverage baselines across 7 backend repositories.}
-        \resumeItem{Support Console TUI}
-          {Replaced fully manual support triage --- where engineers ran 20+ commands per ticket with risk of missed steps --- with a Python TUI that auto-collects subsystem diagnostics and bundles ticket outputs; owned Python 2.7 $\rightarrow$ 3.9 migration of the entire tool.}
         \resumeItem{SAMBA NAS Integration}
-          {Delivered manageability service changes for SAMBA-based NAS share integration, replacing a 7-year-old Likewise protocol stack that lacked support for modern Windows versions.}
-        \resumeItem{GUI Platform -- Cross-Domain Contribution}
-          {Took ownership of React/Grommet frontend work outside primary Java/backend domain; led Grommet 2.0 upgrade across the product and delivered the platform with GUI changes including hardware image updates, capability additions.}
+          {Delivered SAMBA-based NAS share integration into the manageability stack, replacing a 7-year-old Likewise protocol stack that lacked support for modern Windows and Active Directory environments.}
+        \resumeItem{PostgreSQL 12 $\rightarrow$ 18 Migration}
+          {Owned end-to-end migration across the full management stack, covering schema compatibility, extension upgrades, config tuning, and service validation, with zero customer downtime; retired an end-of-life MongoDB config store in the same release to eliminate security exposure.}
+        \resumeItem{P0 Outage Resolution}
+          {Diagnosed and resolved multiple P0 outages on enterprise storage appliances, covering JVM heap exhaustion, OS-level networking regressions, and concurrency defects in the software update pipeline; root-caused each issue through log and code path analysis and delivered fixes with zero recurrence.}
+        \resumeItem{Support Console TUI}
+          {Designed and built a Python TUI to replace fully manual support triage, automating subsystem diagnostic collection and ticket bundling and eliminating 20+ manual steps per ticket; owned the full Python 2.7 $\rightarrow$ 3.9 modernization of the toolchain.}
+        \resumeItem{Software Update Reliability}
+          {Resolved a flag-race defect in the software update pipeline where a stale Java process intermittently blocked customer upgrades; traced the issue via log and code path analysis, reordered the execution sequence, and added stale process guards to prevent recurrence.}
+        \resumeItem{Frontend Cross-Domain Contribution}
+          {Led Grommet 2.0 upgrade across the product frontend (React), owning hardware image updates and capability additions outside primary backend domain.}
+        \resumeItem{Gen5 Platform Bringup}
+          {Contributed to Gen5 platform launch as part of a 12-engineer team, bootstrapping 4 core backend services (Infrastructure Manager, PostgreSQL, Credential Services, SMTP) on Rocky Linux from scratch; shipped ERT log-collection scripts and configurable task timeouts as production support tooling.}
+        \resumeItem{CI/CD Pipeline Design}
+          {Designed and implemented CI/CD pipelines using Jenkins, covering build infrastructure and automated testing; established coverage baselines across 7 backend repositories.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -134,10 +134,10 @@
       {Visual Rust code analysis tool that parses source files into AST, constructs dependency and call graphs, and serves them via an Axum REST API with a Svelte frontend; ships as a single binary. \textit{Rust | tree-sitter | Axum | Svelte}}
     \resumeSubItem{\href{https://github.com/imtherealnaska/rusnmp}{SNMPv2 Manager}}
       {Implemented SNMPv2 manager from scratch: custom ASN.1 BER parser, async Tokio architecture, GetBulk optimization, and a clean API for polling and walking MIBs against real network devices. \textit{Rust | Tokio | ASN.1 BER | UDP}}
-    \resumeSubItem{\href{https://github.com/imtherealnaska/resprs}{Redis-Compatible Server (RESP Protocol)}}
+    \resumeSubItem{\href{https://github.com/imtherealnaska/resprs}{Redis-Compatible Server}}
       {Built a Redis-compatible server from scratch: full RESP protocol parser, pipelining, and core command set on an async Tokio runtime; benchmarked at \textasciitilde85\% of native Redis throughput. \textit{Rust | Tokio | RESP}}
     \resumeSubItem{\href{https://github.com/imtherealnaska/aata}{Consensus Board Game}}
-      {Multiplayer game where 2 players define piece movement rules via a consensus protocol; single GameLoop actor owns all state, WebSocket connections communicate via Tokio channels --- eliminates shared mutable state entirely. \textit{Rust | Tokio | WebSocket | Actor Pattern}}
+      {Multiplayer game where players define piece movement rules via a consensus protocol; single GameLoop actor owns all state via Tokio channels --- eliminates shared mutable state entirely. \textit{Rust | Tokio | WebSocket | Actor Pattern}}
   \resumeSubHeadingListEnd
 
 
@@ -146,12 +146,9 @@
   \resumeSubHeadingListStart
     \item{
       \textbf{Languages}{: Rust | Java | Python | Bash}
-      \hfill
     }
     \item{
-      \textbf{Databases}{: PostgreSQL}
-      \hfill
-      \textbf{Tools}{: Git}
+      \textbf{Databases}{: PostgreSQL | Redis}
     }
   \resumeSubHeadingListEnd
 
