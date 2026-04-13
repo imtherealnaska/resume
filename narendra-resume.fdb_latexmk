@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1776015033 "narendra-resume.tex" "narendra-resume.pdf" "narendra-resume" 1776015034
+["pdflatex"] 1776016049 "narendra-resume.tex" "narendra-resume.pdf" "narendra-resume" 1776016050
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/jknappen/ec/tcrm0900.tfm" 1136768653 1536 c4f439db76ef96a9c53bc437f35ffe20 ""
@@ -79,9 +79,9 @@
   "/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1647878959 4410336 7d30a02e9fa9a16d7d1f8d037ba69641 ""
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1672397995 2826447 c3a96f8c2e5fcf457a5994fc32ae5ffa ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
-  "narendra-resume.aux" 1776015034 1187 31e2010511fe57361052ad066b107d90 "pdflatex"
-  "narendra-resume.out" 1776015034 337 9e007bcbddcaa05dff673a7efc2e3494 "pdflatex"
-  "narendra-resume.tex" 1776015031 7666 fdda4c2e04682cc20d27d02a188a3b98 ""
+  "narendra-resume.aux" 1776016050 1187 31e2010511fe57361052ad066b107d90 "pdflatex"
+  "narendra-resume.out" 1776016050 337 9e007bcbddcaa05dff673a7efc2e3494 "pdflatex"
+  "narendra-resume.tex" 1776015969 7724 9ebc4cf0840efaedeb8e0823e9c6b9ca ""
   (generated)
   "narendra-resume.aux"
   "narendra-resume.log"
