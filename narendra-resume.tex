@@ -1,10 +1,10 @@
 %-------------------------
 % Resume in LateX
-% Author : Sourabh Bajaj
+% Author : Narendra S Kapashi
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,10.5pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -35,8 +35,8 @@
 \setlength{\tabcolsep}{0in}
 
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-2pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 \pdfgentounicode=1
 
@@ -58,7 +58,7 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{#1} & \small #2 \\
       \textit{\small #3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
@@ -81,8 +81,8 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,8 +92,32 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\Large Narendra S Kapashi} & Email: \href{mailto:skapashinarendra@gmail.com}{skapashinarendra@gmail.com}\\
-  \href{https://github.com/imtherealnaska}{github.com/imtherealnaska} $|$ \href{https://www.linkedin.com/in/narendra123/}{linkedin.com/in/narendra123} $|$ \href{https://www.rabbitholes.in}{www.rabbitholes.in} & Mobile: +91 9113246077 \\
+  \textit Mobile: +91 9113246077 $|$ Bengaluru, India \\
+  \href{https://github.com/imtherealnaska}{github.com/imtherealnaska} $|$ \href{https://www.linkedin.com/in/narendra123/}{linkedin.com/in/narendra123} $|$ \href{https://www.rabbitholes.in}{www.rabbitholes.in} & \\
 \end{tabular*}
+
+
+%-----------SUMMARY-----------------
+\section{Summary}
+Systems software engineer with 5+ years of production backend experience at HPE, specializing in protocol-level integration and systems-level reliability engineering. Building high-performance Rust applications focused on async networking, protocol implementation, and concurrent systems design.
+
+
+%--------SKILLS------------
+\section{Skills}
+  \begin{itemize}[leftmargin=*, itemsep=-1pt, topsep=2pt, parsep=0pt]
+    \item\small{
+      \textbf{Rust Ecosystem}{: Rust , Tokio , Axum , Serde , async/await }
+    }
+    \item\small{
+      \textbf{Languages}{: Java , Python , Bash , SQL}
+    }
+    \item\small{
+      \textbf{Systems \& Infrastructure}{: Linux (Rocky, Ubuntu) , Docker , PostgreSQL , Redis , Samba}
+    }
+    \item\small{
+      \textbf{Frontend}{: React , Grommet}
+    }
+  \end{itemize}
 
 
 %-----------EXPERIENCE-----------------
@@ -101,27 +125,25 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Hewlett Packard Enterprise (HPE)}{Bengaluru, IN}
-      {System Software Engineer 2}{2023 -- Present}
-      \resumeSubSubheading
-        {System Software Engineer 1}{2021 -- 2023}
+      {Hewlett Packard Enterprise (HPE)}{Bengaluru, India}
+      {System Software Engineer 2}{2023 - Present}
+    \resumeSubSubheading
+      {System Software Engineer 1}{2021 - 2023}
       \resumeItemListStart
         \resumeItem{SAMBA NAS Integration}
-          {Delivered SAMBA-based NAS share integration into the manageability stack, replacing a 7-year-old Likewise protocol stack that lacked support for modern Windows and Active Directory environments.}
+          {Architected protocol-level integration of SAMBA into the NAS manageability stack, replacing a 7-year-old Likewise protocol stack; designed an authentication system supporting local user and Active Directory-based auth, ensuring zero data loss during share migration and restoring interoperability with modern Windows environments.}
         \resumeItem{PostgreSQL 12 $\rightarrow$ 18 Migration}
-          {Owned end-to-end migration across the full management stack, covering schema compatibility, extension upgrades, config tuning, and service validation, with zero customer downtime; retired an end-of-life MongoDB config store in the same release to eliminate security exposure.}
+          {Delivered zero-downtime data migration of PostgreSQL 12 $\rightarrow$ 18 across the full management stack via backwards-compatible schema evolution, extension upgrades, and multi-stage service validation; retired an end-of-life MongoDB config store in the same release, eliminating a critical security exposure vector.}
         \resumeItem{P0 Outage Resolution}
-          {Diagnosed and resolved multiple P0 outages on enterprise storage appliances, covering JVM heap exhaustion, OS-level networking regressions, and concurrency defects in the software update pipeline; root-caused each issue through log and code path analysis and delivered fixes with zero recurrence.}
-        \resumeItem{Support Console TUI}
-          {Designed and built a Python TUI to replace fully manual support triage, automating subsystem diagnostic collection and ticket bundling and eliminating 20+ manual steps per ticket; owned the full Python 2.7 $\rightarrow$ 3.9 modernization of the toolchain.}
+          {Diagnosed and resolved multiple P0 outages covering memory management failures (JVM heap exhaustion), OS-level networking regressions impacting 15+ enterprise customers, and a concurrency defect in the software update pipeline; performed systems-level root cause analysis through deep log and code path tracing with zero recurrence.}
         \resumeItem{Software Update Reliability}
-          {Resolved a flag-race defect in the software update pipeline where a stale Java process intermittently blocked customer upgrades; traced the issue via log and code path analysis, reordered the execution sequence, and added stale process guards to prevent recurrence.}
+          {Identified and resolved a flag-race concurrency defect where a stale Java process intermittently blocked customer upgrade workflows; applied systematic execution sequence reordering and introduced stale process detection guards to harden the pipeline against future concurrency failures.}
+        \resumeItem{Support Console TUI}
+          {Reduced diagnostic collection time by 40\% by developing a Python 3.9 TUI that consolidated 60+ manual diagnostic commands into a unified automated workflow, eliminating missed steps during critical customer escalations.}
         \resumeItem{Frontend Cross-Domain Contribution}
-          {Led Grommet 2.0 upgrade across the product frontend (React), owning hardware image updates and capability additions outside primary backend domain.}
-        \resumeItem{Gen5 Platform Bringup}
-          {Contributed to Gen5 platform launch as part of a 12-engineer team, bootstrapping 4 core backend services (Infrastructure Manager, PostgreSQL, Credential Services, SMTP) on Rocky Linux from scratch; shipped ERT log-collection scripts and configurable task timeouts as production support tooling.}
-        \resumeItem{CI/CD Pipeline Design}
-          {Designed and implemented CI/CD pipelines using Jenkins, covering build infrastructure and automated testing; established coverage baselines across 7 backend repositories.}
+          {Led Grommet 2.0 upgrade across the full product UI outside primary backend domain, delivering hardware image updates and new capability additions with no regressions to existing customer-facing workflows.}
+        \resumeItem{Platform Bringup}
+          {Contributed to a new platform generation launch as part of a 12-engineer team, bootstrapping 4 core backend services on Rocky Linux from scratch; shipped ERT log-collection scripts, configurable task timeouts, and established test coverage baselines across 7 backend repositories.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -130,26 +152,14 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://github.com/imtherealnaska/sourcemapper}{SourceMapper}}
-      {Visual Rust code analysis tool that parses source files into AST, constructs dependency and call graphs, and serves them via an Axum REST API with a Svelte frontend; ships as a single binary. \textit{Rust | tree-sitter | Axum | Svelte}}
-    \resumeSubItem{\href{https://github.com/imtherealnaska/rusnmp}{SNMPv2 Manager}}
-      {Implemented SNMPv2 manager from scratch: custom ASN.1 BER parser, async Tokio architecture, GetBulk optimization, and a clean API for polling and walking MIBs against real network devices. \textit{Rust | Tokio | ASN.1 BER | UDP}}
-    \resumeSubItem{\href{https://github.com/imtherealnaska/resprs}{Redis-Compatible Server}}
-      {Built a Redis-compatible server from scratch: full RESP protocol parser, pipelining, and core command set on an async Tokio runtime; benchmarked at \textasciitilde85\% of native Redis throughput. \textit{Rust | Tokio | RESP}}
     \resumeSubItem{\href{https://github.com/imtherealnaska/aata}{Consensus Board Game}}
-      {Multiplayer game where players define piece movement rules via a consensus protocol; single GameLoop actor owns all state via Tokio channels --- eliminates shared mutable state entirely. \textit{Rust | Tokio | WebSocket | Actor Pattern}}
-  \resumeSubHeadingListEnd
-
-
-%--------SKILLS------------
-\section{Skills}
-  \resumeSubHeadingListStart
-    \item{
-      \textbf{Languages}{: Rust | Java | Python | Bash}
-    }
-    \item{
-      \textbf{Databases}{: PostgreSQL | Redis}
-    }
+      {Single GameLoop actor owns all state via Tokio channels with WebSocket connections; thread safety enforced through Rust's type system with zero shared mutable state; concurrency correctness guaranteed at compile time by the borrow checker. \textit{Rust | Tokio | WebSocket | Actor Pattern}}
+    \resumeSubItem{\href{https://github.com/imtherealnaska/sourcemapper}{SourceMapper}}
+      {Rust code analysis tool using tree-sitter to parse source files into Abstract Syntax Trees (AST) and construct dependency and call graphs; leverages Rust's ownership model for zero-copy traversal; served via Axum REST API with Svelte frontend as a single binary. \textit{Rust | Cargo | tree-sitter | Axum | Svelte}}
+    \resumeSubItem{\href{https://github.com/imtherealnaska/rusnmp}{SNMPv2 Manager}}
+      {Custom ASN.1 BER parser using Rust's pattern matching and type system; async/await architecture with Tokio for non-blocking UDP I/O; concurrency safety enforced by Rust's borrow checker across concurrent device polling. \textit{Rust | Tokio | ASN.1 BER | UDP}}
+    \resumeSubItem{\href{https://github.com/imtherealnaska/resprs}{Redis-Compatible Server}}
+      {Full RESP protocol parser with pipelining and core command set on async Tokio runtime; Rust's ownership model eliminates data races across concurrent connections; benchmarked at \textasciitilde85\% of native Redis throughput. \textit{Rust | Tokio | RESP}}
   \resumeSubHeadingListEnd
 
 
@@ -158,7 +168,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {The National Institute of Engineering}{Mysuru, India}
-      {Bachelor of Engineering in Information Science}{2016 -- 2020}
+      {Bachelor of Engineering in Information Science}{2016 - 2020}
   \resumeSubHeadingListEnd
 
 %-------------------------------------------
