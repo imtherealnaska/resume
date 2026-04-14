@@ -1,5 +1,5 @@
 *.aux 
-*.fbd*
+*.fdb*
 *.fls
 *.log
 *.out
